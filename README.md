@@ -1,1 +1,11 @@
-# TAMER
+# TAMER: Interest Tree Augmented Modality Graph Recommender for Multimodal Recommendation
+
+##  Resources
+
+| Resource        | Link |
+|-----------------|------|
+| Processed Data  | [Google Drive](https://drive.google.com/drive/folders/1Ne8IAzYjqu9oza_J6QV7u1JUncui0yGE?usp=drive_link) |
+| Item Graph Construction  | [Github](https://github.com/XMUDM/DA-MRS) |
+
+##  Acknowledgement
+The structure of this code is inspired by the [MMRec](https://github.com/enoche/MMRec) framework. We acknowledge and appreciate their valuable contributions.
