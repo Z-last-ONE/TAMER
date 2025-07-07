@@ -12,7 +12,6 @@ import argparse
 import random
 import numpy as np
 import torch
-from tools.generate_data import gen_data
 from utils.quick_start import quick_start
 from utils.utils import init_seed
 
