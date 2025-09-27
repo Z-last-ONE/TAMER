@@ -21,8 +21,8 @@ max_img_size: 256
 
 field_separator: "\t"
 
-gamma: [ 0.1, 0.2, 0.3 ]
-tau: [ 0.6, 0.7, 0.8 ]
+gamma: [0.3]
+tau: [0.7]
 
 alpha_text_p: 0.7
 alpha_interest: 0.1
