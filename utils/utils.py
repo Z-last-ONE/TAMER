@@ -49,28 +49,6 @@ def get_sparse_laplacian(edge_index, edge_weight, num_nodes, normalization='none
     return edge_index, edge_weight
 
 
-def draw_t_sne(X, test_data):
-    X = X.cpu()
-    tst = test_data.dataset
-    # tst = tst.loc[:99,['userID','itemID']]
-    user_group = tst.df['userID'].drop_duplicates().values
-    item_group = tst.df['itemID'].drop_duplicates().values + 19445
-    user_group = X[user_group][:2000]
-    item_group = X[item_group][:2000]
-
-    colors = ["blue"] * 19445 + ["green"] * 7050
-
-    tsne = TSNE(n_components=2, random_state=42)
-    X_embedded = tsne.fit_transform(X)
-    plt.figure(figsize=(14, 10))
-    plt.scatter(user_group[:, 0], user_group[:, 1], color="blue", s=4, label="Group 1")
-    plt.scatter(item_group[:, 0], item_group[:, 1], color="green", s=4, label="Group 2")
-    plt.title("T-SNE Embedding")
-    plt.xlabel("T-SNE Component 1")
-    plt.ylabel("T-SNE Component 2")
-    plt.show()
-
-
 def get_local_time():
     r"""Get current time
 
@@ -266,4 +244,5 @@ def get_sparse_laplacian(edge_index, edge_weight, num_nodes, normalization='none
         deg_inv.masked_fill_(deg_inv == float('inf'), 0)
         edge_weight = deg_inv[row] * edge_weight
     return edge_index, edge_weight
+
 
