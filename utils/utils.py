@@ -7,20 +7,13 @@ Utility functions
 """
 import os
 
-import numpy as np
 import torch
 import importlib
 import datetime
 import random
 import torch.nn.functional as F
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import gridspec
-from matplotlib.colors import LinearSegmentedColormap
-from sklearn.manifold import TSNE
-from sklearn.datasets import load_iris
-from sklearn.decomposition import PCA, FastICA
-from sklearn.preprocessing import MinMaxScaler
+
 
 
 def build_non_zero_graph(adj, is_sparse=True, norm_type='sym'):
@@ -244,5 +237,4 @@ def get_sparse_laplacian(edge_index, edge_weight, num_nodes, normalization='none
         deg_inv.masked_fill_(deg_inv == float('inf'), 0)
         edge_weight = deg_inv[row] * edge_weight
     return edge_index, edge_weight
-
 
