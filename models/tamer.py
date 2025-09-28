@@ -82,19 +82,22 @@ class TAMER(GeneralRecommender):
         if self.v_feat is not None:
             self.image_embedding = nn.Embedding.from_pretrained(self.v_feat, freeze=False)
             _, image_adj = self.get_knn_adj_mat(self.image_embedding.weight.detach())
-            self.image_adj = image_adj.to('cpu')
+            self.image_adj = image_adj
             del image_adj
         if self.p_feat is not None:
             self.p_embedding = nn.Embedding.from_pretrained(self.p_feat, freeze=False)
             _, p_adj = self.get_knn_adj_mat(self.p_embedding.weight.detach())
-            self.p_adj = p_adj.to('cpu')
+            self.p_adj = p_adj
             del p_adj
         if self.z_feat is not None:
             self.z_embedding = nn.Embedding.from_pretrained(self.z_feat, freeze=False)
             _, z_adj = self.get_knn_adj_mat(self.z_embedding.weight.detach())
-            self.z_adj = z_adj.to('cpu')
+            self.z_adj = z_adj
             del z_adj
-
+        
+        self.image_adj.to('cpu')
+        self.p_adj.to('cpu')
+        self.z_adj.to('cpu')
         image_sim = self.build_sim(self.image_embedding.weight.detach()).to('cpu')
         session_enhanced_image = self.build_session_tree(image_sim)
         del image_sim
@@ -599,3 +602,4 @@ class Base_gcn(MessagePassing):
 
     def __repr(self):
         return '{}({},{})'.format(self.__class__.__name__, self.in_channels, self.out_channels)
+
