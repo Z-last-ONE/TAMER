@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from time import time
 from logging import getLogger
 
-from utils.utils import get_local_time, early_stopping, dict2str, plot_tsne
+from utils.utils import get_local_time, early_stopping, dict2str
 from utils.topk_evaluator import TopKEvaluator
 
 
@@ -282,3 +282,4 @@ class Trainer(AbstractTrainer):
             plt.show()
         if save_path:
             plt.savefig(save_path)
+
