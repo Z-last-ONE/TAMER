@@ -11,7 +11,7 @@ from utils.dataset import RecDataset
 from utils.dataloader import TrainDataLoader, EvalDataLoader
 from utils.logger import init_logger
 from utils.configurator import Config
-from utils.utils import init_seed, get_model, get_trainer, dict2str, plot_tsne
+from utils.utils import init_seed, get_model, get_trainer, dict2str
 import platform
 import os
 import torch
@@ -109,3 +109,4 @@ def quick_start(model, dataset, config_dict, save_model=True):
                                                                         hyper_ret[best_test_idx][0],
                                                                         dict2str(hyper_ret[best_test_idx][1]),
                                                                         dict2str(hyper_ret[best_test_idx][2])))
+
