@@ -1,4 +1,4 @@
-# TAMER: Interest Tree Augmented Modality Graph Recommender for Multimodal Recommendation
+# TAMER
 
 ##  Resources
 
