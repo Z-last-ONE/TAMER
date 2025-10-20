@@ -1,7 +1,10 @@
 # TAMER
 
-##  Resources
 
+## Environment
+This project is developed under **Python 3.8** and **PyTorch 2.1 (CUDA 12.1)**.
+
+##  Resources
 | Resource        | Link |
 |-----------------|------|
 | Processed Data  | [Google Drive](https://drive.google.com/drive/folders/1Ne8IAzYjqu9oza_J6QV7u1JUncui0yGE?usp=drive_link) |
