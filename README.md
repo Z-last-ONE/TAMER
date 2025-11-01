@@ -1,9 +1,5 @@
 # TAMER
 
-
-## Environment
-This project is developed under **Python 3.8** and **PyTorch 2.1 (CUDA 12.1)**.
-
 ##  Resources
 | Resource        | Link |
 |-----------------|------|
