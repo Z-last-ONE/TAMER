@@ -1,5 +1,11 @@
 # TAMER
 
+## Additional experimental results are provided below and can be directly used in your work.
+
+| Dataset  | R@10 | R@20 | N@10 | N@20 |
+|----------|-----------|-----------|---------|---------|
+| Clothing | 0.0734    | 0.1075    | 0.0401  | 0.0487  |
+
 ##  Resources
 | Resource        | Link |
 |-----------------|------|
