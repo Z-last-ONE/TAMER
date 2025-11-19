@@ -1,4 +1,4 @@
-# TAMER
+## [TAMER: Interest Tree Augmented Modality Graph Recommender for Multimodal Recommendation](https://dl.acm.org/doi/abs/10.1145/3746027.3754953)
 
 ##  Additional experimental results are provided below and can be directly used in your work.
 | Dataset  | R@10 | R@20 | N@10 | N@20 |
